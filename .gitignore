@@ -20,7 +20,8 @@ lib-cov
 build
 tests
 tests/app.test.js
-package-lock.json
+# package-lock.json
+yarn.lock
 build
 public
 
