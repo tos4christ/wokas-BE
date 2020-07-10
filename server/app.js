@@ -5,8 +5,6 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import indexRouter from './routes';
-import pool from './models/db_connection';
-import createUsers from './models/user_table';
 
 const app = express();
 
@@ -16,10 +14,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
-
-pool.query(createUsers)
-  .then(console.log)
-  .catch(console.log);
 
 app.use('/', indexRouter);
 

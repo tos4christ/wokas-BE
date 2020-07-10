@@ -23,9 +23,7 @@
     "watch:dev": "nodemon",
     "dev": "npm-run-all build serve",
     "prod": "npm-run-all build serve",
-    "start": "npm run prod",
-    "create-table": "node ./build/server/models/user_table",
-    "start-db": "npm-run-all build create-table"
+    "start": "npm run prod"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
