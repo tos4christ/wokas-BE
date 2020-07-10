@@ -26,7 +26,7 @@ app.use('/', indexRouter);
 app.use((req, res) => {
   res.status(404).send({
     status: 'error',
-    error: 'Not Found: Route does not exist',
+    error: 'Not Found: Route does not exist'
   });
 });
 
@@ -34,7 +34,7 @@ app.use((err, req, res) => {
   const status = err.status ? err.status : 500;
   res.status(status).send({
     status: 'error',
-    'Server Error': err.message,
+    'Server Error': err.message
   });
 });
 
